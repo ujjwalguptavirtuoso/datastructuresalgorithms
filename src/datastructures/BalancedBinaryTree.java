@@ -1,3 +1,5 @@
+package datastructures;
+
 public class BalancedBinaryTree {
 
     static int  height(TreeNode root){

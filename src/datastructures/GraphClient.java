@@ -1,3 +1,5 @@
+package datastructures;
+
 public class GraphClient {
     public static void main (String[] args){
         Graph graph = new Graph();
