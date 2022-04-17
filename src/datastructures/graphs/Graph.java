@@ -1,4 +1,4 @@
-package datastructures;
+package datastructures.graphs;
 
 import java.sql.Array;
 import java.util.ArrayList;
