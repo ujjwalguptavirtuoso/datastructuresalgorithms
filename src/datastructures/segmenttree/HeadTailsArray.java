@@ -21,6 +21,14 @@ public class HeadTailsArray {
         System.out.println();
         System.out.println(count);
         System.out.println(count1);
+        System.out.println();
+
+        flip (segmentArr, 1, 0 , n-1, 0);
+
+        for(int i =0; i<= segmentArr.length - 1; i++){
+            System.out.print( segmentArr[i] + " ");
+        }
+
     }
 
     /**
@@ -53,8 +61,8 @@ public class HeadTailsArray {
      * @param segmentArr segment tree array
      * @param qs query start
      * @param qe query end
-     * @param s starting index
-     * @param e end index
+     * @param s starting index of input array
+     * @param e end index of input array
      * @param stIdx index of segment tree
      * @return
      */
@@ -70,6 +78,41 @@ public class HeadTailsArray {
         int mid = (s + e)/2;
         return countHeadsQuery(segmentArr, qs, qe, s, mid, 2* stIdx + 1)
                 + countHeadsQuery(segmentArr, qs, qe, mid+1, e, 2*stIdx + 2);
+    }
+
+
+    /**
+     *
+     * @param segmentArr segment tree array
+     * @param index index to be flipped
+     * @param s start of input array
+     * @param e end of input array
+     * @param stIdx index of segment tree array
+     */
+    private static void flip(int[] segmentArr, int index, int s, int e, int stIdx){
+        // index to be flipped is not present in input array
+        if(index > e || index < s){
+            return;
+        }
+        // reached leaf node or base condition
+        if(s == e){
+            if(segmentArr[stIdx] == 0){
+                segmentArr[stIdx] = 1;
+                return;
+            }
+            else{
+                segmentArr[stIdx] = 0;
+                return;
+            }
+        }
+
+        int mid = (s + e)/2;
+        if(index > mid){
+            flip(segmentArr, index, mid+1, e, 2 *stIdx + 2);
+        }else{
+          flip(segmentArr, index, s, mid, 2*stIdx + 1);
+        }
+        segmentArr[stIdx] = segmentArr[2 * stIdx + 1] + segmentArr[ 2 * stIdx + 2];
     }
 
 
