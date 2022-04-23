@@ -1,11 +1,8 @@
-/**
- * Alipay.com Inc.
- * Copyright (c) 2004-2022 All Rights Reserved.
- */
+
 package datastructures.graphs;
 
 /**
- * @author wb-ujjwalgup584692
+ * @author ujjwal.gupta
  * @version $Id: NumberOfIslandsDFS.java, v 0.1 2022-04-23 09:31
  */
 
