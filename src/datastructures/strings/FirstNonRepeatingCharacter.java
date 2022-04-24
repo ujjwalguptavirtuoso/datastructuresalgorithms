@@ -1,4 +1,4 @@
-package datastructures.Strings;
+package datastructures.strings;
 
 /**
  * @author ujjwal.gupta
