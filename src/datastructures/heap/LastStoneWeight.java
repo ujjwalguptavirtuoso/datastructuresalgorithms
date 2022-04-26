@@ -41,10 +41,7 @@ public class LastStoneWeight {
             pQueue.add(stones[i]);
         }
 
-        // result = smashAndReOrder(pQueue);
-        // return result;
-
-
+        
         while(!pQueue.isEmpty() && pQueue.size()!=1){
             heavy1 = pQueue.poll();
             heavy2 = pQueue.poll();
