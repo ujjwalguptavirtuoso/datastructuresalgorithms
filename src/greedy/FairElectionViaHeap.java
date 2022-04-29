@@ -8,7 +8,9 @@ import java.util.*;
  */
 
 /**
- * Code chef link : https://www.codechef.com/problems/FAIRELCT 
+ * Code chef link : https://www.codechef.com/problems/FAIRELCT
+ *
+ * Here greedy step is to choose max from Jack - the opponent and min from John - the friend
  */
 public class FairElectionViaHeap {
 
