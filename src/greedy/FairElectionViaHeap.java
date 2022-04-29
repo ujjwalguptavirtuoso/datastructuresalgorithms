@@ -6,6 +6,10 @@ import java.util.*;
  * ujjwal.gupta
  * @version $Id: FairElectionViaHeap.java, v 0.1 2022-04-29
  */
+
+/**
+ * Code chef link : https://www.codechef.com/problems/FAIRELCT 
+ */
 public class FairElectionViaHeap {
 
     static int noOfSwaps(PriorityQueue<Integer> johnQueue, PriorityQueue<Integer> jackQueue, int johnVoteSum, int jackVoteSum){
