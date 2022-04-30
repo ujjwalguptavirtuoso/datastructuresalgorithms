@@ -4,6 +4,13 @@ package recursion;
  * @author ujjwal.gupta
  * @version $Id: PrintPatternB.java, v 0.1 2022-05-01
  */
+
+
+/**
+ * |\  |  \      /
+ * | \ |   \    /
+ * |  \|    \/\/
+ */
 public class PrintPatternB {
 
     /**
