@@ -1,12 +1,8 @@
-/**
- * Alipay.com Inc.
- * Copyright (c) 2004-2022 All Rights Reserved.
- */
 package recursion;
 
 /**
- * @author wb-ujjwalgup584692
- * @version $Id: PrintPathsIn2DMatrix.java, v 0.1 2022-05-01 01:57 wb-ujjwalgup584692 Exp $$
+ * ujjwal.gupta
+ * @version $Id: PrintPathsIn2DMatrix.java, v 0.1 2022-05-01
  */
 
 /**
@@ -39,7 +35,7 @@ public class PrintPathsIn2DMatrix {
     public static void main(String[] args) {
         int n = 3;
         int m =3;
-        int[][] grid = new int[n][m];t 
+        int[][] grid = new int[n][m];
         printPathsin2DMatrix(grid, 0, 0, "");
         System.out.println("Total Paths = " + count);
     }
