@@ -48,6 +48,8 @@ public class PrintPermutations {
         //  printPermutations("ABCD", "");
 
         printPermutations2("ABC", "");
+        System.out.println();
+        printPermutations2("AAC", "");
 
     }
 
