@@ -1,5 +1,8 @@
 package recursion;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * ujjwal.gupta
  * @version $Id: PrintPermutations.java, v 0.1 2022-05-02
@@ -11,35 +14,41 @@ public class PrintPermutations {
 
     //Approach 1 : Print all permutations duplicates also allowed , answer for Q2
 
-    static void printPermutations(String s, String osf){
-        if(s.length() == osf.length()){
+    static void printPermutations(String s, String osf) {
+        if (s.length() == osf.length()) {
             System.out.println(osf);
             return;
         }
-       // char[] stringToChar = s.toCharArray();
-        for(int i=0; i < s.length(); i++){
+        // char[] stringToChar = s.toCharArray();
+        for (int i = 0; i < s.length(); i++) {
             printPermutations(s, osf + s.charAt(i));
         }
 
     }
 
-    //Approach 2: Print permutations but not duplicates, answer for Q1
-
-    static void printPermutations2(String s, String osf){
-        if(s.length() == 0){
+    static void printPermutations2(String s, String osf) {
+        if (s.length() == 0) {
             System.out.println(osf);
             return;
         }
-        for(int i=0; i<s.length(); i++) {
-            printPermutations2(s.substring(0, i) + s.substring(i+1), osf + s.charAt(i));
+
+        Set<Character> set = new HashSet<>();  // set used to store duplicate characters in a string and we dont go the same path for duplicate characters , for eg AAC
+        for (int i = 0; i < s.length(); i++) {
+            Character ch = s.charAt(i);
+            if (!set.contains(ch)) {
+                String ros = s.substring(0, i) + s.substring(i + 1);
+                set.add(ch);
+                printPermutations2(ros, osf + ch);
+            }
         }
     }
 
     public static void main(String[] args) {
 
-         printPermutations("ABCD", "");
+        //  printPermutations("ABCD", "");
 
-         printPermutations2("ABCD", "");
+        printPermutations2("ABC", "");
 
     }
+
 }
