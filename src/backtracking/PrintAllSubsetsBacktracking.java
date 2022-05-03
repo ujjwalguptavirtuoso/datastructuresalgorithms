@@ -16,9 +16,9 @@ public class PrintAllSubsetsBacktracking {
             return;
         }
         // when we chose a element to be included
-        list.add(arr[i]);
+        list.add(arr[i]);                    // first push in the list
         printSubset(arr, n , i + 1, list);
-        list.remove(list.size() - 1); // back to original state for backtracking
+        list.remove(list.size() - 1); // remove it to get back to original state for backtracking
 
         //when we choose an element to not be included
         printSubset(arr, n, i+1, list);
