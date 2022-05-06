@@ -5,9 +5,10 @@ import java.util.Scanner;
 
 /**
  * ujjwal.gupta
- * @version $Id: PlaceKnightsOnGrid.java, v 0.1 2022-05-04
+ * @version $Id: KnightsTour.java, v 0.1 2022-05-04
  */
-public class PlaceKnightsOnGrid {
+// Given a n*n board, find if the knight can traverse each cell of the board without visiting any cell twice, if yes print all possible paths
+public class KnightsTour {
 
     void display(int [][] grid, int n){
         for(int i=0 ; i<n; i++){
@@ -53,7 +54,7 @@ public class PlaceKnightsOnGrid {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        PlaceKnightsOnGrid obj = new PlaceKnightsOnGrid();
+        KnightsTour obj = new KnightsTour();
         int [][] grid = new int [n][n];
         boolean [][] visited = new boolean[n][n];
 

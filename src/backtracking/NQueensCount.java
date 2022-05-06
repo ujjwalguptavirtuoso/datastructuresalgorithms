@@ -10,6 +10,7 @@ import java.util.Scanner;
  * @author wb-ujjwalgup584692
  * @version $Id: NQueensCount.java, v 0.1 2022-05-04 02:26 wb-ujjwalgup584692 Exp $$
  */
+// Given n*n board, find and display number of ways to place n non attacking Queens on the board
 public class NQueensCount {
 
     static int totalCount = 0;
