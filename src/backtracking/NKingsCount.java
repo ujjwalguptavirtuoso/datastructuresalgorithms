@@ -7,7 +7,7 @@ import java.util.Scanner;
  *
  * @version $Id: NKingsCount.java, v 0.1 2022-05-06
  *
- * 	Number of ways to place n nonattacking kings on an n X n board. 
+ * 	Number of ways to place n nonattacking kings on an n X n board.
  */
 public class NKingsCount {
 
