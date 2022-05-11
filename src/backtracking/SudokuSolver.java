@@ -21,6 +21,23 @@ public class SudokuSolver {
 
   //  char[][] board = new char[9][9];
 
+    public void solveSudoku(char[][] board) {
+        // initializing already present elements in board in auxillary arrays
+        for(int i = 0; i<9; i++){
+            for(int j = 0 ; j < 9; j ++){
+                if(board[i][j] != '.'){
+                    int x = board[i][j] - '0';
+                    row_aux[i][x]++;
+                    col_aux[j][x]++ ;
+                    int k = ( i / 3 ) * 3 + j/3 ;
+                    box_aux[k][x]++;
+                }
+            }
+        }
+
+        helper(board, 0 , 0);
+    }
+
 
 
 
