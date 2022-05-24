@@ -53,7 +53,6 @@ public class GraphS {
            int u = sc.nextInt();
            int wt = sc.nextInt();
            edges --;
-
            addEdge(v, u, true, wt);
            //display();
         }
