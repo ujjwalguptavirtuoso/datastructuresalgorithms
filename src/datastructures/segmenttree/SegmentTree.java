@@ -53,6 +53,7 @@ public class SegmentTree {
         if(qs <= ss && qe >= se){
             return segmentArr[pointer];
         }
+
         // no overlap
         if(qs > se || qe < ss){
             return 0;
